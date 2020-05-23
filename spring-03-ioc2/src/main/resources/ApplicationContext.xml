@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+        使用Spring来创建对象，在spring这些都称为bean
+        bean = 对象   new Hello();
+        property  给对象中的属性赋值
+    -->
+    <!--无参-->
+<!--    <bean id="user" class="com.wang.pojo.User">-->
+<!--        <property name="name" value="haha"/>-->
+<!--    </bean>-->
+    <!--有参方式1,下标赋值-->
+<!--        <bean id="user" class="com.wang.pojo.User">-->
+<!--            <constructor-arg index="0" value="hehe"/>-->
+<!--        </bean>-->
+    <!--有参方式2，参数类型赋值  不建议使用，因为把类型写死了-->
+<!--    <bean id="user" class="com.wang.pojo.User">-->
+<!--        <constructor-arg type="java.lang.String" value="hoho"/>-->
+<!--    </bean>-->
+    <!--有参方式3，直接通过参数名来赋值-->
+    <bean id="user" class="com.wang.pojo.User">
+        <constructor-arg name="name" value="hbhb"/>
+    </bean>
+</beans>
