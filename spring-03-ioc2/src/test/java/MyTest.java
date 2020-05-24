@@ -10,7 +10,7 @@ public class MyTest {
     public static void main(String[] args) {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("ApplicationContext.xml");
 
-        User user = (User) applicationContext.getBean("user");
+        User user = (User) applicationContext.getBean("mmm");
         user.show();
     }
 }
