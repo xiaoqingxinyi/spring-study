@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
  */
 //注解的意思，这个类被spring接管了 component
 @Component
-public class User {
+public class User extends Thread{
     private String name;
 
     public String getName() {
