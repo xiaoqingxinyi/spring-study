@@ -24,15 +24,20 @@
 <!--    </aop:config>-->
 
     <!--方式2 ： 自定义类-->
-    <bean id="diy" class="com.wang.diy.DivPointCut"/>
+<!--    <bean id="diy" class="com.wang.diy.DivPointCut"/>-->
 
-    <aop:config>
-        <!--自定义切面  ref 要引用的类-->
-        <aop:aspect ref="diy">
-            <!--切入点-->
-            <aop:pointcut id="point" expression="execution(* com.wang.service.UserServiceImpl.*(..))"/>
-            <aop:before method="before" pointcut-ref="point"/>
-            <aop:after method="after" pointcut-ref="point"/>
-        </aop:aspect>
-    </aop:config>
+<!--    <aop:config>-->
+<!--        &lt;!&ndash;自定义切面  ref 要引用的类&ndash;&gt;-->
+<!--        <aop:aspect ref="diy">-->
+<!--            &lt;!&ndash;切入点&ndash;&gt;-->
+<!--            <aop:pointcut id="point" expression="execution(* com.wang.service.UserServiceImpl.*(..))"/>-->
+<!--            <aop:before method="before" pointcut-ref="point"/>-->
+<!--            <aop:after method="after" pointcut-ref="point"/>-->
+<!--        </aop:aspect>-->
+<!--    </aop:config>-->
+
+    <!--方法三-->
+    <bean id="annotationPointCut" class="com.wang.diy.AnnotationPointCut"/>
+    <!--开启注解支持-->
+    <aop:aspectj-autoproxy/>
 </beans>
